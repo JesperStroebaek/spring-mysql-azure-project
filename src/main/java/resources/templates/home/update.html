@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/resources/static/MyCSS.css">
 </head>
 <body>
   <h1>Update the person</h1>
 
-  <form action="/updatePerson" method="post">
-    <input type="text" name="id" th:value="${person.id}">
-    <input type="text" name="first_name" th:value="${person.first_name}">
-    <input type="text" name="last_name" th:value="${person.last_name}">
+  <form action="update.html" method="post">
+      <label for="id"></label>
+      <input id="id" type="number" name="id" th:value="${person.id}">
+      <label for="first_name"></label>
+      <input type="text" name="first_name" id="first_name" th:value="${person.first_name}">
+      <label for="last_name"></label>
+      <input type="text" id="last_name" name="last_name" th:value="${person.last_name}">
     <input type="submit" value="Save changes">
   </form>
 </body>

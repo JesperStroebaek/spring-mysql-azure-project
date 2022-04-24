@@ -20,7 +20,7 @@ public class HomeController {
     @GetMapping("/")
     public String index(Model model){
         List<Person> personList = personService.fetchAll();
-        model.addAttribute("persons", personList);
+        model.addAttribute("person", personList);
         return "home/index";
     }
     @GetMapping("/create")

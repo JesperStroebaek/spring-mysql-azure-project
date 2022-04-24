@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+    <link rel="stylesheet" type="text/css" href="/resources/static/MyCSS.css">
 </head>
 <body>
   <h1>Person list</h1>
@@ -23,9 +23,9 @@
         </thead>
         <tbody>
             <tr th:each="person: ${persons}">
-                <td th:text="${person.id}"/>
-                <td th:text="${person.first_name}"/>
-                <td th:text="${person.last_name}"/>
+                <td th:text="${person.id}"></td>
+                <td th:text="${person.first_name}"></td>
+                <td th:text="${person.last_name}"></td>
                 <td>
                     <a th:href="@{'/viewOne/'+${person.id}}">
                         <button class="btn-viewOne" id="btn-viewOne">View person</button>
